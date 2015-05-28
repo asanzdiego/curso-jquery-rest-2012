@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Imports</title>
+    <script src="jquery.js"></script>
+    <script src="dust-full-0.3.0.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+      var compiled_padre = dust.compile(
+        'Inicio{~n}{+titulo}TITULO PADRE{/titulo}{~n}Fin', "padre");
+      dust.loadSource(compiled_padre);
+      var compiled_hijo = dust.compile(
+        '{>padre/}{<titulo}OTRO TITULO{/titulo}', "hijo");
+      dust.loadSource(compiled_hijo);
+      dust.render("hijo",{empleados:["Carlos","Diego"]}
+        ,function (error, salida){
+          $("body").html(salida);
+      });
+    });
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Renderización</title>
+    <script src="jquery.js"></script>
+    <script src="dust-full-0.3.0.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+      var compiled = dust.compile("Hola {nombre}!", "introduccion");
+      dust.loadSource(compiled);
+      dust.render("introduccion",{nombre: "Ruben"},function (error, salida){
+        $("body").html(salida);
+      });
+    });
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

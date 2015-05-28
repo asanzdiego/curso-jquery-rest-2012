@@ -1,0 +1,46 @@
+<html>
+ <head>
+  <title>Examples</title>
+  <script src="../jquery.js"></script>
+  <script>
+    $(document).ready(function(){
+      $(":header").css("margin", "0px");
+      $(":header").click(function(){
+        $(this).next("div").toggle("fast");
+      });
+      $("#show").click(function(){
+        $("div").show("fast");
+      });
+      $("#hide").click(function(){
+        $("div").hide("fast");
+      });
+    });
+  </script>
+  <style>
+    div {
+      display: none;
+    }
+    h2 {
+      background-color: grey;
+    }
+  </style>
+ </head>
+ <body>
+  <a id="show" href="#">show all</a> | <a id="hide" href="#">hide all</a> <br />
+<h2>&nbsp;ejemplos</h2>
+<div>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/ejemplos/01-compilacion" target="show-example">01-compilacion</a>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/ejemplos/02-render" target="show-example">02-render</a>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/ejemplos/03-objeto-simple" target="show-example">03-objeto-simple</a>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/ejemplos/04-lista" target="show-example">04-lista</a>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/ejemplos/05-contexto" target="show-example">05-contexto</a>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/ejemplos/06-direccion" target="show-example">06-direccion</a>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/ejemplos/07-parametros" target="show-example">07-parametros</a>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/ejemplos/08-contexto-padre" target="show-example">08-contexto-padre</a>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/ejemplos/09-etiquetas" target="show-example">09-etiquetas</a>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/ejemplos/10-etiquetas-avanzado" target="show-example">10-etiquetas-avanzado</a>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/ejemplos/11-atributos" target="show-example">11-atributos</a>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/ejemplos/12-imports" target="show-example">12-imports</a>
+</div>
+ </body>
+</html>

@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Atributos</title>
+    <script src="jquery.js"></script>
+    <script src="dust-full-0.3.0.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+      var compiled = dust.compile(
+	      '{?empleados}<ul>{#empleados}<li><{@idx}{.}{/idx} - {.}</li>{/empleados}</ul>'
+	      + '{:else}No posee empleados{/empleados}', "listado");
+      dust.loadSource(compiled);
+      dust.render("listado",{empleados:["Carlos","Diego"]}
+        ,function (error, salida){
+          $("body").html(salida);
+      });
+    });
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

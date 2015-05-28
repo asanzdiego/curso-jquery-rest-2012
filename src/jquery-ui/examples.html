@@ -1,0 +1,59 @@
+<html>
+ <head>
+  <title>Examples</title>
+  <script src="../jquery.js"></script>
+  <script>
+    $(document).ready(function(){
+      $(":header").css("margin", "0px");
+      $(":header").click(function(){
+        $(this).next("div").toggle("fast");
+      });
+      $("#show").click(function(){
+        $("div").show("fast");
+      });
+      $("#hide").click(function(){
+        $("div").hide("fast");
+      });
+    });
+  </script>
+  <style>
+    div {
+      display: none;
+    }
+    h2 {
+      background-color: grey;
+    }
+  </style>
+ </head>
+ <body>
+  <a id="show" href="#">show all</a> | <a id="hide" href="#">hide all</a> <br />
+<h2>&nbsp;efects</h2>
+<div>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/efects/class" target="show-example">class</a>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/efects/toggle" target="show-example">toggle</a>
+</div>
+<h2>&nbsp;interactions</h2>
+<div>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/interactions/draggable" target="show-example">draggable</a>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/interactions/droppable" target="show-example">droppable</a>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/interactions/position" target="show-example">position</a>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/interactions/resizable" target="show-example">resizable</a>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/interactions/selectable" target="show-example">selectable</a>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/interactions/sortable" target="show-example">sortable</a>
+</div>
+<h2>&nbsp;widgets</h2>
+<div>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/widgets/accordion" target="show-example">accordion</a>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/widgets/autocomplete" target="show-example">autocomplete</a>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/widgets/buttons" target="show-example">buttons</a>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/widgets/datepicker" target="show-example">datepicker</a>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/widgets/dialog" target="show-example">dialog</a>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/widgets/menu" target="show-example">menu</a>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/widgets/progessbar" target="show-example">progessbar</a>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/widgets/slider" target="show-example">slider</a>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/widgets/spinner" target="show-example">spinner</a>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/widgets/tabs" target="show-example">tabs</a>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/widgets/tooltip" target="show-example">tooltip</a>
+</div>
+ </body>
+</html>

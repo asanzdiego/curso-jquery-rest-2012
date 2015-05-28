@@ -1,0 +1,81 @@
+
+buenos días {nombre}! 
+Ahora mismo tienes el siguiente identificador de empresa: {id}.
+
+{
+  "id": 1,
+  "nombre": "Rubén"
+}
+
+buenos días Rubén! 
+Ahora mismo tienes el siguiente identificador de empresa: 1 .
+
+{#lista}
+		{clave}, {nombre}{~n}
+{:else}
+		Sin trabajadores registrados!
+{/lista}
+
+{#lista/}
+{#usuarios}
+	{.}
+{/usuarios}
+
+{usuarios:["Rubén","Pedro","Luis"]}
+
+{direccion.calle}
+
+{#usuarios categoria="empleados" tipo="trabajador"}
+  {nombre}, {categoria}, {tipo}
+{/usuarios}
+
+{nombre}{~n}
+{#empleados nombre_padre=nombre}
+  {nombre}, {nombre_padre}
+{/empleados}
+
+{
+	nombre:"Carlos",
+	empleados:{
+		nombre:"Diego"
+	}
+}
+
+{#empleados nombre_padre="{nombre}_GER"}
+  {nombre}, {nombre_padre}
+{/empleados}
+
+
+{?empleados}
+  <ul>
+    {#empleados}
+      <li>{.}</li>
+    {/empleados}
+  </ul>
+{:else}
+  No posee empleados!
+{/tags}
+
+{#usuarios}
+	{@idx}{.}{/idx}
+{/usuarios}
+
+Inicio(~n}
+{+titulo}
+	TITULO PADRE
+{/titulo}
+(~n}Fin
+
+Inicio
+TITULO PADRE
+Fin
+
+{>template_ejemplo/}
+{<titulo}
+	OTRO TITULO
+{/titulo}
+
+Inicio
+OTRO TITULO
+Fin
+

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc" />
+  <meta name="description" content="jQuery, REST y otros frameworks" />
+  <meta name="author" content="Adolfo Sanz De Diego" />
+  <meta name="copyright" content="jQuery, REST y otros frameworks - Adolfo Sanz De Diego -  Octubre 2012" /> 
+  <title>jQuery, REST y otros frameworks</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header>
+<h1 class="title">jQuery, REST y otros frameworks</h1>
+<h2 class="author">Adolfo Sanz De Diego</h2>
+<h3 class="date">Octubre 2012</h3>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#acerca-de"><span class="toc-section-number">1</span> Acerca de</a><ul>
+<li><a href="#pronoide"><span class="toc-section-number">1.1</span> Pronoide</a></li>
+<li><a href="#autor"><span class="toc-section-number">1.2</span> Autor</a></li>
+<li><a href="#licencia"><span class="toc-section-number">1.3</span> Licencia</a></li>
+</ul></li>
+<li><a href="#jquery"><span class="toc-section-number">2</span> jQuery</a><ul>
+<li><a href="#qué-es-jquery"><span class="toc-section-number">2.1</span> ¿Qué es jQuery?</a></li>
+<li><a href="#selectores"><span class="toc-section-number">2.2</span> Selectores</a></li>
+<li><a href="#eventos"><span class="toc-section-number">2.3</span> Eventos</a></li>
+<li><a href="#css"><span class="toc-section-number">2.4</span> CSS</a></li>
+<li><a href="#efectos"><span class="toc-section-number">2.5</span> Efectos</a></li>
+<li><a href="#html"><span class="toc-section-number">2.6</span> HTML</a></li>
+<li><a href="#ajax"><span class="toc-section-number">2.7</span> AJAX</a></li>
+<li><a href="#plugins"><span class="toc-section-number">2.8</span> Plugins</a></li>
+</ul></li>
+<li><a href="#jquery-ui"><span class="toc-section-number">3</span> jQuery UI</a><ul>
+<li><a href="#qué-es-jquery-ui"><span class="toc-section-number">3.1</span> ¿Qué es jQuery UI?</a></li>
+<li><a href="#componentes"><span class="toc-section-number">3.2</span> Componentes</a></li>
+</ul></li>
+<li><a href="#jquery-mobile"><span class="toc-section-number">4</span> jQuery Mobile</a><ul>
+<li><a href="#qué-es-jquery-mobile"><span class="toc-section-number">4.1</span> ¿Qué es jQuery Mobile?</a></li>
+<li><a href="#ejemplos"><span class="toc-section-number">4.2</span> Ejemplos</a></li>
+</ul></li>
+<li><a href="#rest"><span class="toc-section-number">5</span> REST</a><ul>
+<li><a href="#qué-es-rest"><span class="toc-section-number">5.1</span> ¿Qué es REST?</a></li>
+<li><a href="#por-qué-rest"><span class="toc-section-number">5.2</span> ¿Por qué REST?</a></li>
+<li><a href="#ejemplo-api"><span class="toc-section-number">5.3</span> Ejemplo API</a></li>
+<li><a href="#manejo-de-errores"><span class="toc-section-number">5.4</span> Manejo de errores</a></li>
+</ul></li>
+<li><a href="#otros-frameworks"><span class="toc-section-number">6</span> Otros frameworks</a><ul>
+<li><a href="#backbone.js"><span class="toc-section-number">6.1</span> backbone.js</a></li>
+<li><a href="#require.js"><span class="toc-section-number">6.2</span> require.js</a></li>
+<li><a href="#dust.js"><span class="toc-section-number">6.3</span> dust.js</a></li>
+<li><a href="#lesscss.js"><span class="toc-section-number">6.4</span> lesscss.js</a></li>
+<li><a href="#modernizr.js"><span class="toc-section-number">6.5</span> modernizr.js</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="acerca-de"><a href="#acerca-de"><span class="header-section-number">1</span> Acerca de</a></h1>
+<h2 id="pronoide"><a href="#pronoide"><span class="header-section-number">1.1</span> Pronoide</a></h2>
+<figure>
+<img src="../img/logo-pronoide.png" alt="Pronoide" /><figcaption>Pronoide</figcaption>
+</figure>
+<ul>
+<li><p>Pronoide consolida sus servicios de formación superando las <strong>22.000 horas impartidas</strong> en más de 500 cursos (Diciembre 2011)</p></li>
+<li><p>En la vorágine de <strong>tecnologías y marcos de trabajo existentes para la plataforma Java</strong>, una empresa dedica demasiado esfuerzo en analizar, comparar y finalmente decidir cuáles son los pilares sobre los que construir sus proyectos.</p></li>
+<li><p>Nuestros Servicios de Formación Java permiten ayudarle en esta tarea, transfiriéndoles nuestra <strong>experiencia real de más de 10 años</strong>.</p></li>
+</ul>
+<h2 id="autor"><a href="#autor"><span class="header-section-number">1.2</span> Autor</a></h2>
+<ul>
+<li><strong>Adolfo Sanz De Diego</strong>
+<ul>
+<li>Correo: <a href="mailto:asanzdiego@gmail.com">asanzdiego@gmail.com</a></li>
+<li>Twitter: <a href="http://twitter.com/asanzdiego">@asanzdiego</a></li>
+<li>Linkedin: <a href="http://www.linkedin.com/in/asanzdiego">http://www.linkedin.com/in/asanzdiego</a></li>
+<li>Blog: <a href="http://asanzdiego.blogspot.com.es">http://asanzdiego.blogspot.com.es</a></li>
+</ul></li>
+</ul>
+<h2 id="licencia"><a href="#licencia"><span class="header-section-number">1.3</span> Licencia</a></h2>
+<ul>
+<li><strong>Este obra está bajo una licencia:</strong>
+<ul>
+<li><a href="http://creativecommons.org/licenses/by-sa/3.0/es/">Creative Commons Reconocimiento-CompartirIgual 3.0</a></li>
+</ul></li>
+<li><strong>El código fuente de los programas están bajo una licencia:</strong>
+<ul>
+<li><a href="http://www.viti.es/gnu/licenses/gpl.html">GPL 3.0</a></li>
+</ul></li>
+</ul>
+<h1 id="jquery"><a href="#jquery"><span class="header-section-number">2</span> jQuery</a></h1>
+<h2 id="qué-es-jquery"><a href="#qué-es-jquery"><span class="header-section-number">2.1</span> ¿Qué es jQuery?</a></h2>
+<ul>
+<li><p>Es una librería JavaScript que <strong>simplifica el manejo del DOM</strong> del HTML.</p></li>
+<li><p>Funciona seleccionando uno o varios elementos y ejecutando una acción sobre ellos.</p></li>
+<li><p>&quot;<strong>Write less, do more.</strong>&quot;</p></li>
+<li><p>La mejor API que he visto <a href="http://oscarotero.com/jquery/">jQuery Quick API Reference</a></p></li>
+</ul>
+<h2 id="selectores"><a href="#selectores"><span class="header-section-number">2.2</span> Selectores</a></h2>
+<ul>
+<li>Utiliza <strong>los mismos que CSS</strong>, y alguno más propio.</li>
+</ul>
+<h2 id="eventos"><a href="#eventos"><span class="header-section-number">2.3</span> Eventos</a></h2>
+<ul>
+<li><p>jQuery está pensado para <strong>recoger y/o lanzar</strong> eventos.</p></li>
+<li><p>Estos eventos normalmente son <strong>eventos de ratón, de teclado</strong>.</p></li>
+<li><p>También maneja los <strong>eventos de cambio de estado</strong> de algún elemento del DOM.</p></li>
+</ul>
+<h2 id="css"><a href="#css"><span class="header-section-number">2.4</span> CSS</a></h2>
+<ul>
+<li>Podemos cambiar tanto el <strong>atributo style</strong>, como las <strong>clases</strong> de un elemento.</li>
+</ul>
+<h2 id="efectos"><a href="#efectos"><span class="header-section-number">2.5</span> Efectos</a></h2>
+<ul>
+<li><p><strong>Ocultar, mostrar, desvanecer</strong> elementos.</p></li>
+<li><p>También podemos hacer <strong>animaciones</strong> cambiando el CSS.</p></li>
+<li><p>Ver también <a href="http://ricostacruz.com/jquery.transit/">CSS3 transitions jQuery plugin</a></p></li>
+</ul>
+<h2 id="html"><a href="#html"><span class="header-section-number">2.6</span> HTML</a></h2>
+<ul>
+<li>Podemos <strong>cambiar el DOM</strong> del HTML:
+<ul>
+<li>añadiendo texto tanto al principio como al final de un elemento,</li>
+<li>cambiando el texto de un elemento,</li>
+<li>añadiendo un elemento tanto antes como después de un elemento,</li>
+<li>eliminando elementos.</li>
+</ul></li>
+</ul>
+<h2 id="ajax"><a href="#ajax"><span class="header-section-number">2.7</span> AJAX</a></h2>
+<ul>
+<li><strong>Simplifica las peticiones AJAX</strong>, pudiendo manejar su estado.</li>
+</ul>
+<h2 id="plugins"><a href="#plugins"><span class="header-section-number">2.8</span> Plugins</a></h2>
+<ul>
+<li><p>Existe un <strong>gran catálogo</strong> de plugins.</p></li>
+<li><p>Los plugins <strong>se crean de una forma muy sencilla</strong>.</p></li>
+<li><p>Ver <a href="http://docs.jquery.com/Tutorials:Getting_Started_with_jQuery">Tutorial Oficial</a></p></li>
+</ul>
+<h1 id="jquery-ui"><a href="#jquery-ui"><span class="header-section-number">3</span> jQuery UI</a></h1>
+<h2 id="qué-es-jquery-ui"><a href="#qué-es-jquery-ui"><span class="header-section-number">3.1</span> ¿Qué es jQuery UI?</a></h2>
+<ul>
+<li><p>Son un conjunto de <strong>componentes visuales</strong>, con <a href="http://jqueryui.com/themeroller/">temas personalizables</a>.</p></li>
+<li><p>Las clases CSS se pueden reutilizar. Ver <a href="http://docs.jquery.com/UI/Theming/API">The jQuery UI CSS Framework</a></p></li>
+<li><p>Las demos están muy bien, con muchos y muy buenos ejemplos <a href="http://jqueryui.com/demos/">jQuery UI Demos</a></p></li>
+</ul>
+<h2 id="componentes"><a href="#componentes"><span class="header-section-number">3.2</span> Componentes</a></h2>
+<ul>
+<li><strong>Interactions</strong>: draggable, droppable, resizable, selectable, sortable</li>
+<li><strong>Widgets</strong>: accordion, autocomplete, button, datepicker, dialog, menu, progressbar, slider, spinner, tabs, tooltip</li>
+<li><strong>Efects</strong>: blind, bounce, clip, drop, explode, fade, fold, highlight, pulsate, scale, shake, slide, transfer</li>
+</ul>
+<h1 id="jquery-mobile"><a href="#jquery-mobile"><span class="header-section-number">4</span> jQuery Mobile</a></h1>
+<h2 id="qué-es-jquery-mobile"><a href="#qué-es-jquery-mobile"><span class="header-section-number">4.1</span> ¿Qué es jQuery Mobile?</a></h2>
+<ul>
+<li><p>Son componentes pensados para <strong>aplicaciones móviles</strong>.</p></li>
+<li><p>Están pensados para el manejo de <strong>eventos táctiles</strong>.</p></li>
+</ul>
+<h2 id="ejemplos"><a href="#ejemplos"><span class="header-section-number">4.2</span> Ejemplos</a></h2>
+<ul>
+<li><p>Toda la documentación del site está hecha con el propio framework.</p></li>
+<li><p>Ver <a href="http://jquerymobile.com/">jQuery Mobile</a></p></li>
+<li><p>Ver <a href="http://jquerymobile.com/demos/">jQuery Mobile Documentation</a></p></li>
+</ul>
+<h1 id="rest"><a href="#rest"><span class="header-section-number">5</span> REST</a></h1>
+<h2 id="qué-es-rest"><a href="#qué-es-rest"><span class="header-section-number">5.1</span> ¿Qué es REST?</a></h2>
+<ul>
+<li><p>REST (Representational State Transfer) es una técnica de arquitectura software para sistemas hipermedia distribuidos como la World Wide Web.</p></li>
+<li><p>Es decir, <strong>una URL (Uniform Resource Locator) representa un recurso al que se puede acceder o modificar mediante los métodos del protocolo HTTP (POST, GET, PUT, DELETE)</strong>.</p></li>
+<li><p>Ver <a href="https://eamodeorubio.wordpress.com/category/webservices/rest/">Artículos de REST de Enrique Amodeo Rubio (@eamodeorubio)</a></p></li>
+</ul>
+<h2 id="por-qué-rest"><a href="#por-qué-rest"><span class="header-section-number">5.2</span> ¿Por qué REST?</a></h2>
+<ul>
+<li>Es <strong>más sencillo</strong> (tanto la API como la implementación).</li>
+<li>Es <strong>más rápido</strong> (peticiones más lijeras que se puede cachear).</li>
+<li>Es <strong>multiformato</strong> (HTML, XML, JSON, etc.).</li>
+<li>Se complementa muy bien con <strong>AJAX</strong>.</li>
+</ul>
+<h2 id="ejemplo-api"><a href="#ejemplo-api"><span class="header-section-number">5.3</span> Ejemplo API</a></h2>
+<table>
+<col style="width: 11%" /><col style="width: 42%" /><col style="width: 46%" /><tbody>
+<tr class="odd">
+<td style="text-align: left;"><p>GET</p></td>
+<td style="text-align: left;"><p>-&gt; http://myhost.com/person</p></td>
+<td style="text-align: left;"><p>-&gt; Devuelve todas las personas</p></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><p>POST</p></td>
+<td style="text-align: left;"><p>-&gt; http://myhost.com/person</p></td>
+<td style="text-align: left;"><p>-&gt; Crear una nueva persona</p></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><p>GET</p></td>
+<td style="text-align: left;"><p>-&gt; http://myhost.com/person/123</p></td>
+<td style="text-align: left;"><p>-&gt; Devuelve la persona con id=123</p></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><p>PUT</p></td>
+<td style="text-align: left;"><p>-&gt; http://myhost.com/person/123</p></td>
+<td style="text-align: left;"><p>-&gt; Actualiza la persona con id=123</p></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><p>DELETE</p></td>
+<td style="text-align: left;"><p>-&gt; http://myhost.com/person/123</p></td>
+<td style="text-align: left;"><p>-&gt; Borra la persona con id=123</p></td>
+</tr>
+</tbody>
+</table>
+<h2 id="manejo-de-errores"><a href="#manejo-de-errores"><span class="header-section-number">5.4</span> Manejo de errores</a></h2>
+<ul>
+<li><p><strong>Se pueden utilizar los errores del protocolo HTTP</strong>:</p>
+<ul>
+<li>200 OK Standard response for successful HTTP requests</li>
+<li>201 Created</li>
+<li>202 Accepted</li>
+<li>301 Moved Permanently</li>
+<li>400 Bad Request</li>
+<li>401 Unauthorised</li>
+<li>402 Payment Required</li>
+<li>403 Forbidden</li>
+<li>404 Not Found</li>
+<li>405 Method Not Allowed</li>
+<li>500 Internal Server Error</li>
+<li>501 Not Implemented</li>
+</ul></li>
+</ul>
+<h1 id="otros-frameworks"><a href="#otros-frameworks"><span class="header-section-number">6</span> Otros frameworks</a></h1>
+<h2 id="backbone.js"><a href="#backbone.js"><span class="header-section-number">6.1</span> backbone.js</a></h2>
+<ul>
+<li><p><a href="http://backbonejs.org/">backbone.js</a> implementa el <strong>paradigma MVC en cliente</strong>.</p></li>
+<li><p>Permite crear un <strong>modelo que se actualiza con el servidor (mediante REST y AJAX)</strong>, <strong>y que refresca las vistas que tenga asociadas en el cliente</strong>.</p></li>
+<li><p>Ver <a href="https://github.com/documentcloud/backbone/wiki/Tutorials%2C-blog-posts-and-example-sites">Tutorials, blog posts and example sites</a></p></li>
+<li><p>Ver <a href="http://net.tutsplus.com/sessions/build-a-contacts-manager-using-backbone-js/">Tutplus Backbone Tutorial</a></p></li>
+</ul>
+<h2 id="require.js"><a href="#require.js"><span class="header-section-number">6.2</span> require.js</a></h2>
+<ul>
+<li><p><a href="http://requirejs.org/">require.js</a> permite la <strong>gestión de dependencias</strong> entre módulos.</p></li>
+<li><p>Los <strong>módulos se cargan de forma asíncrona</strong> (según se vayan necesitando).</p></li>
+<li><p>Ver <a href="http://backbonetutorials.com/organizing-backbone-using-modules/">Organizing your application using Modules with require.js</a></p></li>
+</ul>
+<h2 id="dust.js"><a href="#dust.js"><span class="header-section-number">6.3</span> dust.js</a></h2>
+<ul>
+<li><a href="http://akdubya.github.com/dustjs">dust.js</a> es un <strong>motor de plantillas</strong> en JavaScript.</li>
+</ul>
+<h2 id="lesscss.js"><a href="#lesscss.js"><span class="header-section-number">6.4</span> lesscss.js</a></h2>
+<ul>
+<li><p><a href="http://lesscss.org/">lesscss.js</a> permite crear <strong>archivos CSS de forma programática</strong>.</p></li>
+<li><p>Se pueden usar archivos .less y la librería JavaScript (desarrollo) o &quot;compilar&quot; los archivos .less en archivos .css (producción)</p></li>
+<li><p>Aquí hay <a href="http://ivanmendoza.net/diseno-web-2/introduccion-less-css">un buen tutorial sobre less</a></p></li>
+</ul>
+<h2 id="modernizr.js"><a href="#modernizr.js"><span class="header-section-number">6.5</span> modernizr.js</a></h2>
+<ul>
+<li><a href="http://modernizr.com/">modernizr.js</a> <strong>detecta las características CSS3 y HTML5 que soporta el navegador</strong>.</li>
+</ul>
+</body>
+</html>

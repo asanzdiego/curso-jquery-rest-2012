@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=1024, user-scalable=no">
+  <meta name="generator" content="pandoc" />
+  <meta name="description" content="jQuery, REST y otros frameworks" />
+  <meta name="author" content="Adolfo Sanz De Diego" />
+  <meta name="copyright" content="jQuery, REST y otros frameworks - Adolfo Sanz De Diego -  Octubre 2012" /> 
+  <title>jQuery, REST y otros frameworks</title>
+
+  <!-- deck core css -->
+  <link rel="stylesheet" href="./css/deck-core.css">
+
+  <!-- deck extensions css -->
+  <link rel="stylesheet" href="./css/deck-extension/goto.css">
+  <link rel="stylesheet" href="./css/deck-extension/hash.css">
+  <link rel="stylesheet" href="./css/deck-extension/menu.css">
+  <link rel="stylesheet" href="./css/deck-extension/navigation.css">
+  <link rel="stylesheet" href="./css/deck-extension/status.css">
+  <link rel="stylesheet" href="./css/deck-extension/pointer.css">
+
+  <!-- deck slide theme css -->
+  <link rel="stylesheet" href="./css/deck-slide-theme/web.css">
+  <!--
+  <link rel="stylesheet" href="./css/deck-slide-theme/beamer.css">
+  <link rel="stylesheet" href="./css/deck-slide-theme/mnml.css">
+  <link rel="stylesheet" href="./css/deck-slide-theme/neon.css">
+  <link rel="stylesheet" href="./css/deck-slide-theme/swiss.css">
+  <link rel="stylesheet" href="./css/deck-slide-theme/web.css">
+  -->
+
+  <!-- deck slide transition css -->
+  <link rel="stylesheet" href="./css/deck-slide-transition/cube.css">
+  <!--
+  <link rel="stylesheet" href="./css/deck-slide-transition/beamer.css">
+  <link rel="stylesheet" href="./css/deck-slide-transition/cube.css">
+  <link rel="stylesheet" href="./css/deck-slide-transition/fade.css">
+  <link rel="stylesheet" href="./css/deck-slide-transition/horizontal.css">
+  <link rel="stylesheet" href="./css/deck-slide-transition/vertical.css">
+  -->
+
+  <!-- custom css just for this page -->
+  <link rel="stylesheet" href="./css/deck-custom.css">
+
+  <!-- modernizr deck js  -->
+  <script src="./js/modernizr-custom.js"></script>
+
+</head>
+<body class="deck-container">
+<section class="slide">
+  <h2 id="titlepage">jQuery, REST y otros frameworks</h2>
+  <h3 id="documentauthor">Adolfo Sanz De Diego</h3>
+  <h4 id="documentdate">Octubre 2012</h4>
+</section>
+
+<section id="acerca-de" class="titleslide slide level1"><h1><span class="header-section-number">1</span> Acerca de</h1></section><section id="pronoide" class="slide level2">
+<h2><span class="header-section-number">1.1</span> Pronoide</h2>
+<figure>
+<img src="../img/logo-pronoide.png" alt="Pronoide" /><figcaption>Pronoide</figcaption>
+</figure>
+<ul>
+<li><p>Pronoide consolida sus servicios de formación superando las <strong>22.000 horas impartidas</strong> en más de 500 cursos (Diciembre 2011)</p></li>
+<li><p>En la vorágine de <strong>tecnologías y marcos de trabajo existentes para la plataforma Java</strong>, una empresa dedica demasiado esfuerzo en analizar, comparar y finalmente decidir cuáles son los pilares sobre los que construir sus proyectos.</p></li>
+<li><p>Nuestros Servicios de Formación Java permiten ayudarle en esta tarea, transfiriéndoles nuestra <strong>experiencia real de más de 10 años</strong>.</p></li>
+</ul>
+</section><section id="autor" class="slide level2">
+<h2><span class="header-section-number">1.2</span> Autor</h2>
+<ul>
+<li><strong>Adolfo Sanz De Diego</strong>
+<ul>
+<li>Correo: <a href="mailto:asanzdiego@gmail.com">asanzdiego@gmail.com</a></li>
+<li>Twitter: <a href="http://twitter.com/asanzdiego">@asanzdiego</a></li>
+<li>Linkedin: <a href="http://www.linkedin.com/in/asanzdiego">http://www.linkedin.com/in/asanzdiego</a></li>
+<li>Blog: <a href="http://asanzdiego.blogspot.com.es">http://asanzdiego.blogspot.com.es</a></li>
+</ul></li>
+</ul>
+</section><section id="licencia" class="slide level2">
+<h2><span class="header-section-number">1.3</span> Licencia</h2>
+<ul>
+<li><strong>Este obra está bajo una licencia:</strong>
+<ul>
+<li><a href="http://creativecommons.org/licenses/by-sa/3.0/es/">Creative Commons Reconocimiento-CompartirIgual 3.0</a></li>
+</ul></li>
+<li><strong>El código fuente de los programas están bajo una licencia:</strong>
+<ul>
+<li><a href="http://www.viti.es/gnu/licenses/gpl.html">GPL 3.0</a></li>
+</ul></li>
+</ul>
+</section>
+<section id="jquery" class="titleslide slide level1"><h1><span class="header-section-number">2</span> jQuery</h1></section><section id="qué-es-jquery" class="slide level2">
+<h2><span class="header-section-number">2.1</span> ¿Qué es jQuery?</h2>
+<ul>
+<li><p>Es una librería JavaScript que <strong>simplifica el manejo del DOM</strong> del HTML.</p></li>
+<li><p>Funciona seleccionando uno o varios elementos y ejecutando una acción sobre ellos.</p></li>
+<li><p>&quot;<strong>Write less, do more.</strong>&quot;</p></li>
+<li><p>La mejor API que he visto <a href="http://oscarotero.com/jquery/">jQuery Quick API Reference</a></p></li>
+</ul>
+</section><section id="selectores" class="slide level2">
+<h2><span class="header-section-number">2.2</span> Selectores</h2>
+<ul>
+<li>Utiliza <strong>los mismos que CSS</strong>, y alguno más propio.</li>
+</ul>
+</section><section id="eventos" class="slide level2">
+<h2><span class="header-section-number">2.3</span> Eventos</h2>
+<ul>
+<li><p>jQuery está pensado para <strong>recoger y/o lanzar</strong> eventos.</p></li>
+<li><p>Estos eventos normalmente son <strong>eventos de ratón, de teclado</strong>.</p></li>
+<li><p>También maneja los <strong>eventos de cambio de estado</strong> de algún elemento del DOM.</p></li>
+</ul>
+</section><section id="css" class="slide level2">
+<h2><span class="header-section-number">2.4</span> CSS</h2>
+<ul>
+<li>Podemos cambiar tanto el <strong>atributo style</strong>, como las <strong>clases</strong> de un elemento.</li>
+</ul>
+</section><section id="efectos" class="slide level2">
+<h2><span class="header-section-number">2.5</span> Efectos</h2>
+<ul>
+<li><p><strong>Ocultar, mostrar, desvanecer</strong> elementos.</p></li>
+<li><p>También podemos hacer <strong>animaciones</strong> cambiando el CSS.</p></li>
+<li><p>Ver también <a href="http://ricostacruz.com/jquery.transit/">CSS3 transitions jQuery plugin</a></p></li>
+</ul>
+</section><section id="html" class="slide level2">
+<h2><span class="header-section-number">2.6</span> HTML</h2>
+<ul>
+<li>Podemos <strong>cambiar el DOM</strong> del HTML:
+<ul>
+<li>añadiendo texto tanto al principio como al final de un elemento,</li>
+<li>cambiando el texto de un elemento,</li>
+<li>añadiendo un elemento tanto antes como después de un elemento,</li>
+<li>eliminando elementos.</li>
+</ul></li>
+</ul>
+</section><section id="ajax" class="slide level2">
+<h2><span class="header-section-number">2.7</span> AJAX</h2>
+<ul>
+<li><strong>Simplifica las peticiones AJAX</strong>, pudiendo manejar su estado.</li>
+</ul>
+</section><section id="plugins" class="slide level2">
+<h2><span class="header-section-number">2.8</span> Plugins</h2>
+<ul>
+<li><p>Existe un <strong>gran catálogo</strong> de plugins.</p></li>
+<li><p>Los plugins <strong>se crean de una forma muy sencilla</strong>.</p></li>
+<li><p>Ver <a href="http://docs.jquery.com/Tutorials:Getting_Started_with_jQuery">Tutorial Oficial</a></p></li>
+</ul>
+</section>
+<section id="jquery-ui" class="titleslide slide level1"><h1><span class="header-section-number">3</span> jQuery UI</h1></section><section id="qué-es-jquery-ui" class="slide level2">
+<h2><span class="header-section-number">3.1</span> ¿Qué es jQuery UI?</h2>
+<ul>
+<li><p>Son un conjunto de <strong>componentes visuales</strong>, con <a href="http://jqueryui.com/themeroller/">temas personalizables</a>.</p></li>
+<li><p>Las clases CSS se pueden reutilizar. Ver <a href="http://docs.jquery.com/UI/Theming/API">The jQuery UI CSS Framework</a></p></li>
+<li><p>Las demos están muy bien, con muchos y muy buenos ejemplos <a href="http://jqueryui.com/demos/">jQuery UI Demos</a></p></li>
+</ul>
+</section><section id="componentes" class="slide level2">
+<h2><span class="header-section-number">3.2</span> Componentes</h2>
+<ul>
+<li><strong>Interactions</strong>: draggable, droppable, resizable, selectable, sortable</li>
+<li><strong>Widgets</strong>: accordion, autocomplete, button, datepicker, dialog, menu, progressbar, slider, spinner, tabs, tooltip</li>
+<li><strong>Efects</strong>: blind, bounce, clip, drop, explode, fade, fold, highlight, pulsate, scale, shake, slide, transfer</li>
+</ul>
+</section>
+<section id="jquery-mobile" class="titleslide slide level1"><h1><span class="header-section-number">4</span> jQuery Mobile</h1></section><section id="qué-es-jquery-mobile" class="slide level2">
+<h2><span class="header-section-number">4.1</span> ¿Qué es jQuery Mobile?</h2>
+<ul>
+<li><p>Son componentes pensados para <strong>aplicaciones móviles</strong>.</p></li>
+<li><p>Están pensados para el manejo de <strong>eventos táctiles</strong>.</p></li>
+</ul>
+</section><section id="ejemplos" class="slide level2">
+<h2><span class="header-section-number">4.2</span> Ejemplos</h2>
+<ul>
+<li><p>Toda la documentación del site está hecha con el propio framework.</p></li>
+<li><p>Ver <a href="http://jquerymobile.com/">jQuery Mobile</a></p></li>
+<li><p>Ver <a href="http://jquerymobile.com/demos/">jQuery Mobile Documentation</a></p></li>
+</ul>
+</section>
+<section id="rest" class="titleslide slide level1"><h1><span class="header-section-number">5</span> REST</h1></section><section id="qué-es-rest" class="slide level2">
+<h2><span class="header-section-number">5.1</span> ¿Qué es REST?</h2>
+<ul>
+<li><p>REST (Representational State Transfer) es una técnica de arquitectura software para sistemas hipermedia distribuidos como la World Wide Web.</p></li>
+<li><p>Es decir, <strong>una URL (Uniform Resource Locator) representa un recurso al que se puede acceder o modificar mediante los métodos del protocolo HTTP (POST, GET, PUT, DELETE)</strong>.</p></li>
+<li><p>Ver <a href="https://eamodeorubio.wordpress.com/category/webservices/rest/">Artículos de REST de Enrique Amodeo Rubio (@eamodeorubio)</a></p></li>
+</ul>
+</section><section id="por-qué-rest" class="slide level2">
+<h2><span class="header-section-number">5.2</span> ¿Por qué REST?</h2>
+<ul>
+<li>Es <strong>más sencillo</strong> (tanto la API como la implementación).</li>
+<li>Es <strong>más rápido</strong> (peticiones más lijeras que se puede cachear).</li>
+<li>Es <strong>multiformato</strong> (HTML, XML, JSON, etc.).</li>
+<li>Se complementa muy bien con <strong>AJAX</strong>.</li>
+</ul>
+</section><section id="ejemplo-api" class="slide level2">
+<h2><span class="header-section-number">5.3</span> Ejemplo API</h2>
+<table>
+<col style="width: 11%" /><col style="width: 42%" /><col style="width: 46%" /><tbody>
+<tr class="odd">
+<td style="text-align: left;"><p>GET</p></td>
+<td style="text-align: left;"><p>-&gt; http://myhost.com/person</p></td>
+<td style="text-align: left;"><p>-&gt; Devuelve todas las personas</p></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><p>POST</p></td>
+<td style="text-align: left;"><p>-&gt; http://myhost.com/person</p></td>
+<td style="text-align: left;"><p>-&gt; Crear una nueva persona</p></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><p>GET</p></td>
+<td style="text-align: left;"><p>-&gt; http://myhost.com/person/123</p></td>
+<td style="text-align: left;"><p>-&gt; Devuelve la persona con id=123</p></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><p>PUT</p></td>
+<td style="text-align: left;"><p>-&gt; http://myhost.com/person/123</p></td>
+<td style="text-align: left;"><p>-&gt; Actualiza la persona con id=123</p></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><p>DELETE</p></td>
+<td style="text-align: left;"><p>-&gt; http://myhost.com/person/123</p></td>
+<td style="text-align: left;"><p>-&gt; Borra la persona con id=123</p></td>
+</tr>
+</tbody>
+</table>
+</section><section id="manejo-de-errores" class="slide level2">
+<h2><span class="header-section-number">5.4</span> Manejo de errores</h2>
+<ul>
+<li><p><strong>Se pueden utilizar los errores del protocolo HTTP</strong>:</p>
+<ul>
+<li>200 OK Standard response for successful HTTP requests</li>
+<li>201 Created</li>
+<li>202 Accepted</li>
+<li>301 Moved Permanently</li>
+<li>400 Bad Request</li>
+<li>401 Unauthorised</li>
+<li>402 Payment Required</li>
+<li>403 Forbidden</li>
+<li>404 Not Found</li>
+<li>405 Method Not Allowed</li>
+<li>500 Internal Server Error</li>
+<li>501 Not Implemented</li>
+</ul></li>
+</ul>
+</section>
+<section id="otros-frameworks" class="titleslide slide level1"><h1><span class="header-section-number">6</span> Otros frameworks</h1></section><section id="backbone.js" class="slide level2">
+<h2><span class="header-section-number">6.1</span> backbone.js</h2>
+<ul>
+<li><p><a href="http://backbonejs.org/">backbone.js</a> implementa el <strong>paradigma MVC en cliente</strong>.</p></li>
+<li><p>Permite crear un <strong>modelo que se actualiza con el servidor (mediante REST y AJAX)</strong>, <strong>y que refresca las vistas que tenga asociadas en el cliente</strong>.</p></li>
+<li><p>Ver <a href="https://github.com/documentcloud/backbone/wiki/Tutorials%2C-blog-posts-and-example-sites">Tutorials, blog posts and example sites</a></p></li>
+<li><p>Ver <a href="http://net.tutsplus.com/sessions/build-a-contacts-manager-using-backbone-js/">Tutplus Backbone Tutorial</a></p></li>
+</ul>
+</section><section id="require.js" class="slide level2">
+<h2><span class="header-section-number">6.2</span> require.js</h2>
+<ul>
+<li><p><a href="http://requirejs.org/">require.js</a> permite la <strong>gestión de dependencias</strong> entre módulos.</p></li>
+<li><p>Los <strong>módulos se cargan de forma asíncrona</strong> (según se vayan necesitando).</p></li>
+<li><p>Ver <a href="http://backbonetutorials.com/organizing-backbone-using-modules/">Organizing your application using Modules with require.js</a></p></li>
+</ul>
+</section><section id="dust.js" class="slide level2">
+<h2><span class="header-section-number">6.3</span> dust.js</h2>
+<ul>
+<li><a href="http://akdubya.github.com/dustjs">dust.js</a> es un <strong>motor de plantillas</strong> en JavaScript.</li>
+</ul>
+</section><section id="lesscss.js" class="slide level2">
+<h2><span class="header-section-number">6.4</span> lesscss.js</h2>
+<ul>
+<li><p><a href="http://lesscss.org/">lesscss.js</a> permite crear <strong>archivos CSS de forma programática</strong>.</p></li>
+<li><p>Se pueden usar archivos .less y la librería JavaScript (desarrollo) o &quot;compilar&quot; los archivos .less en archivos .css (producción)</p></li>
+<li><p>Aquí hay <a href="http://ivanmendoza.net/diseno-web-2/introduccion-less-css">un buen tutorial sobre less</a></p></li>
+</ul>
+</section><section id="modernizr.js" class="slide level2">
+<h2><span class="header-section-number">6.5</span> modernizr.js</h2>
+<ul>
+<li><a href="http://modernizr.com/">modernizr.js</a> <strong>detecta las características CSS3 y HTML5 que soporta el navegador</strong>.</li>
+</ul>
+</section>
+
+<!--footer id="footer">
+  <h4 class="author"> Adolfo Sanz De Diego  - Octubre 2012</h4>
+</footer-->
+
+<!-- deck goto extension html -->
+<form action="." method="get" class="goto-form">
+  <label for="goto-slide">Go to slide:</label>
+  <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+  <datalist id="goto-datalist"></datalist>
+  <input type="submit" value="Go">
+</form>
+
+<!-- deck hash extension html -->
+<a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+
+<!-- deck navigation extension html -->
+<a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+<a href="#" class="deck-next-link" title="Next">&#8594;</a>
+
+<!-- deck status extension html -->
+<p class="deck-status">
+  <span class="deck-status-current"></span> / <span class="deck-status-total"></span>
+</p>
+
+<!-- deck core js  -->
+<script src="./js/jquery-1.7-min.js"></script>
+<script src="./js/deck-core.js"></script>
+
+<!-- deck extension js -->
+<script src="./js/deck-extension/goto.js"></script>
+<script src="./js/deck-extension/hash.js"></script>
+<script src="./js/deck-extension/menu.js"></script>
+<script src="./js/deck-extension/navigation.js"></script>
+<script src="./js/deck-extension/status.js"></script>
+<script src="./js/deck-extension/search.js"></script>
+<script src="./js/deck-extension/pointer.js"></script>
+
+<!-- Initialize the deck. -->
+<script src="./js/init-deck.js"></script>
+
+</body>
+</html>

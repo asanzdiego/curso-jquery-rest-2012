@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+
+  <head>
+    <meta charset="utf-8" />
+    <title>jQuery</title>
+    <script src="../jquery.js"></script>
+    <script>
+    $(document).ready(function(){
+      $("#childs").click(function(){
+        $("body > p").toggleClass("selected");
+      });
+      $("#descendant").click(function(){
+        $("body p").toggleClass("selected");
+      });
+      $("#first-child").click(function(){
+        $("ul li:first-child").toggleClass("selected");
+      });
+      $("#last-child").click(function(){
+        $("ul li:last-child").toggleClass("selected");
+      });
+      $("#class").click(function(){
+        $(".name .friend").toggleClass("selected");
+      });
+    });
+    </script>
+    <style>
+    .selected {
+      background: red;
+    }
+    </style>
+  </head>
+
+  <body>
+    <h1>Welcome to My Homepage</h1>
+    <p class="name">My name is <span class="friend">Donald</span></p>
+    <p>I live in Duckburg</p>
+    <p class="friend">My best friend is Mickey</p>
+    Is one your favourite?
+    <ul id="choose">
+      <li id="Pluto"><p>Pluto</p></li>
+      <li id="Minnie"><p>Minnie</p></li>
+    </ul>
+    And this others?
+    <ul id="choose">
+      <li id="Goofy"><p>Goofy</p></li>
+      <li id="Mickey"><p>Mickey</p></li>
+    </ul>
+    <br /><button id="childs">Select all 'body' paragraphs childs</button>
+    <br /><button id="descendant">Select all 'body' paragraphs descendant</button>
+    <br /><button id="first-child">Select the first 'li' of all 'ul'</button>
+    <br /><button id="last-child">Select the last 'li' of all 'ul'</button>
+    <br /><button id="class">Select the elements with 'name' and 'fiend' class </button>
+  </body>
+
+</html>

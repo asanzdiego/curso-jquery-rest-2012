@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Parámetros</title>
+    <script src="jquery.js"></script>
+    <script src="dust-full-0.3.0.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+      var compiled = dust.compile(
+	      '{#lista categoria="Empleados" tipo="trabajador"}{id},'
+	        + '{categoria} {tipo} {nombre}, {direccion.tipo} - {direccion.nombre}{~n}'
+	        + '{:else}Sin trabajadores registrados!{/lista}'
+	       , "listado");
+      dust.loadSource(compiled);
+      dust.render("listado",
+	      {lista:
+	        [{id: 1, nombre: "Ruben",direccion:{tipo:"Calle",nombre:"Real"}},
+	         {id: 2, nombre: "Ruben2",direccion:{tipo:"Plaza",nombre:"Mayor"}}]}
+	      ,function (error, salida){
+          $("body").html(salida);
+      });
+    });
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

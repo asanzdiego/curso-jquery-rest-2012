@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Mi primer plugin con jQuery</title>
+		<script type="text/javascript" src="../jquery.js"></script>
+		<script type="text/javascript" src="jquery.alert.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function(){
+			$("button").click(function(){
+				$("h1").alert();
+			});
+		});
+		</script>
+		<style type="text/css">
+		.seleccionado{background:red}
+		</style>
+	</head>
+	<body>
+		<h1>Mi primer plugin con jQuery</h1>
+		<button>Alertar</button>
+	</body>
+</html>

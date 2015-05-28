@@ -1,0 +1,42 @@
+<html>
+ <head>
+  <title>Examples</title>
+  <script src="../jquery.js"></script>
+  <script>
+    $(document).ready(function(){
+      $(":header").css("margin", "0px");
+      $(":header").click(function(){
+        $(this).next("div").toggle("fast");
+      });
+      $("#show").click(function(){
+        $("div").show("fast");
+      });
+      $("#hide").click(function(){
+        $("div").hide("fast");
+      });
+    });
+  </script>
+  <style>
+    div {
+      display: none;
+    }
+    h2 {
+      background-color: grey;
+    }
+  </style>
+ </head>
+ <body>
+  <a id="show" href="#">show all</a> | <a id="hide" href="#">hide all</a> <br />
+<h2>&nbsp;ejemplos</h2>
+<div>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/ejemplos/00-ejemplos" target="show-example">00-ejemplos</a>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/ejemplos/01-contenido" target="show-example">01-contenido</a>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/ejemplos/02-navegacion" target="show-example">02-navegacion</a>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/ejemplos/03-popup" target="show-example">03-popup</a>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/ejemplos/04-botones" target="show-example">04-botones</a>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/ejemplos/05-toolbars" target="show-example">05-toolbars</a>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/ejemplos/06-listas" target="show-example">06-listas</a>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/ejemplos/07-formularios" target="show-example">07-formularios</a>
+</div>
+ </body>
+</html>

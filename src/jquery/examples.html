@@ -1,0 +1,96 @@
+<html>
+ <head>
+  <title>Examples</title>
+  <script src="../jquery.js"></script>
+  <script>
+    $(document).ready(function(){
+      $(":header").css("margin", "0px");
+      $(":header").click(function(){
+        $(this).next("div").toggle("fast");
+      });
+      $("#show").click(function(){
+        $("div").show("fast");
+      });
+      $("#hide").click(function(){
+        $("div").hide("fast");
+      });
+    });
+  </script>
+  <style>
+    div {
+      display: none;
+    }
+    h2 {
+      background-color: grey;
+    }
+  </style>
+ </head>
+ <body>
+  <a id="show" href="#">show all</a> | <a id="hide" href="#">hide all</a> <br />
+<h2>&nbsp;ajax</h2>
+<div>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/ajax/ajaxError" target="show-example">ajaxError</a>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/ajax/ajaxStart-ajaxComplete" target="show-example">ajaxStart-ajaxComplete</a>
+</div>
+<h2>&nbsp;css</h2>
+<div>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/css/class" target="show-example">class</a>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/css/position" target="show-example">position</a>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/css/scroll" target="show-example">scroll</a>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/css/size" target="show-example">size</a>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/css/style" target="show-example">style</a>
+</div>
+<h2>&nbsp;effects</h2>
+<div>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/effects/animation" target="show-example">animation</a>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/effects/fade" target="show-example">fade</a>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/effects/slide" target="show-example">slide</a>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/effects/toggle" target="show-example">toggle</a>
+</div>
+<h2>&nbsp;events</h2>
+<div>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/events/change" target="show-example">change</a>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/events/focus-blur" target="show-example">focus-blur</a>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/events/keys" target="show-example">keys</a>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/events/load-error" target="show-example">load-error</a>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/events/mouse" target="show-example">mouse</a>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/events/one" target="show-example">one</a>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/events/on-off" target="show-example">on-off</a>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/events/resize" target="show-example">resize</a>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/events/scroll" target="show-example">scroll</a>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/events/select" target="show-example">select</a>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/events/submit" target="show-example">submit</a>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/events/target" target="show-example">target</a>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/events/timeStamp" target="show-example">timeStamp</a>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/events/unload" target="show-example">unload</a>
+</div>
+<h2>&nbsp;html</h2>
+<div>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/html/attributes" target="show-example">attributes</a>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/html/clone" target="show-example">clone</a>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/html/empty" target="show-example">empty</a>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/html/insertAfter" target="show-example">insertAfter</a>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/html/insertBefore" target="show-example">insertBefore</a>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/html/remove" target="show-example">remove</a>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/html/replace" target="show-example">replace</a>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/html/value" target="show-example">value</a>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/html/wrap" target="show-example">wrap</a>
+</div>
+<h2>&nbsp;others</h2>
+<div>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/others/callbacks" target="show-example">callbacks</a>
+</div>
+<h2>&nbsp;plugin</h2>
+<div>
+</div>
+<h2>&nbsp;selectors</h2>
+<div>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/selectors/attribute" target="show-example">attribute</a>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/selectors/avanced" target="show-example">avanced</a>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/selectors/basic" target="show-example">basic</a>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/selectors/forms" target="show-example">forms</a>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/selectors/index" target="show-example">index</a>
+<br/>&nbsp;&nbsp;&nbsp;<a href="show-example.html?url=/selectors/others" target="show-example">others</a>
+</div>
+ </body>
+</html>

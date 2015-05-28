@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Etiquetas</title>
+    <script src="jquery.js"></script>
+    <script src="dust-full-0.3.0.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+      var compiled = dust.compile(
+	      '{nombre}{~n}{#empleados nombre_padre=nombre}{nombre}, '
+	      + '{nombre_padre}{/empleados}', "listado");
+      dust.loadSource(compiled);
+      dust.render("listado",{nombre:"Carlos",empleados:{nombre:"Diego"}}
+        ,function (error, salida){
+          $("body").html(salida);
+      });
+    });
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

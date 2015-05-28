@@ -1,0 +1,16 @@
+@color: red;
+
+.bordes-redondeados (@radio: 5px){
+	background: @color;
+	border-radius: @radio;
+	-webkit-border-radius: @radio;
+	-moz-border-radius: @radio;
+}
+
+h1 {
+	.bordes-redondeados(10px);
+}
+
+p {
+	.bordes-redondeados;
+}

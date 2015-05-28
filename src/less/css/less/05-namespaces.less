@@ -1,0 +1,20 @@
+@color: red;
+
+#minamespace {
+	.miclase {
+		background-color: @color;
+	}
+}
+
+.miclase {
+	background-color: darken(@color, 30%);
+}
+
+
+h1 {
+	#minamespace > .miclase;
+}
+
+p {
+  .miclase
+}
